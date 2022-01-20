@@ -1,6 +1,11 @@
-Sistema de Recrutamento Frontend
+Ôªø**Sistema de Recrutamento Frontend**
+
 O frontend do sistema foi desenvolvido em Angular 8 com Material.
-Antes de rodar o front, È importante apontar para o servidor que est· rodando o back, isso È feito no arquivo src\environments\environment.ts, altere LOCALHOST por IPDOSERVIDORBACK.
-Para rodar o projeto ser· necess·rio a instalaÁ„o no Node vers„o 12 no mÌnimo, e o Angular CLI vers„o 8 no mÌnimo.
-Com eles instalados execute o comando ìnpm installî, apÛs a instalaÁ„o de todas as dependÍncias basta executar o comando ìng serveî. Por padr„o o sistema ficar· disponÌvel em http://IPDOSERVIDOR:4200.
-TambÈm foram criados os scripts para execuÁ„o da aplicaÁ„o utilizando o Docker e Docker composse, havendo o Docker e Docker composse devidamente instalados e configurados, basta executar o comando ìdocker-compose up -dî.
+
+Antes de rodar o front, √© importante apontar para o servidor que est√° rodando o back, isso √© feito no arquivo src\environments\environment.ts, altere LOCALHOST por IPDOSERVIDORBACK.
+
+Para rodar o projeto ser√° necess√°rio a instala√ß√£o no Node vers√£o 12 no m√≠nimo, e o Angular CLI vers√£o 8 no m√≠nimo.
+
+Com eles instalados execute o comando ‚Äúnpm install‚Äù, ap√≥s a instala√ß√£o de todas as depend√™ncias basta executar o comando ‚Äúng serve‚Äù. Por padr√£o o sistema ficar√° dispon√≠vel em http://IPDOSERVIDOR:4200.
+
+Tamb√©m foram criados os scripts para execu√ß√£o da aplica√ß√£o utilizando o Docker e Docker composse, havendo o Docker e Docker composse devidamente instalados e configurados, basta executar o comando ‚Äúdocker-compose up -d‚Äù.
