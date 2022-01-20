@@ -1,0 +1,28 @@
+package com.kaspper.recrutamento.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+public class Candidato {
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nome;
+    @ManyToOne
+    @JoinColumn(name = "PerfilId", nullable = false,updatable = false, insertable = true)
+    private Perfil perfil;
+    private Double pretensao;
+    private String descricao;
+    private String curriculoBase64;
+    private String curriculoNome;
+}

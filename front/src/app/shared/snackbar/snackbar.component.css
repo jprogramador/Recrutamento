@@ -1,0 +1,28 @@
+.snackbar-wrap{
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transform-origin: center center;
+    transform: translate(-50%, 0px);        
+}
+
+.sucesso{
+    background: #d4edda;
+    color:#155724;
+}
+.erro{
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.aviso{
+    background: #fff3cd;
+    color: #856404;
+}
+
+.snackbar-text{
+    text-align: center;
+    margin: 0;
+}

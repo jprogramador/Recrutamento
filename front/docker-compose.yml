@@ -1,0 +1,9 @@
+version: '3.5'
+services:
+  recrutamentofront:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: recrutamentofront
+    ports:
+      - 4200:4200

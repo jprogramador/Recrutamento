@@ -1,0 +1,44 @@
+<h2>Nova Vaga</h2>
+  <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+    <div class="mat-elevation-z8 cadastro">
+        <mat-form-field>
+            <input matInput placeholder="Vaga" id="vaga" required 
+                [(ngModel)]="vaga.nome" name="nome" formControlName="nome" autofocus>
+            <mat-error *ngIf="f.nome.invalid && submitted">
+                {{f.nome.hasError('required') ? 'Vaga é obrigatória' : ''}}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Tipo</mat-label>
+            <mat-select [(ngModel)]="vaga.tipo" 
+                id="tipo" name="tipo"
+                formControlName="tipo">
+                <mat-option *ngFor="let tipo of tipoVagaEnum | keyvalue" [value]="tipo.value">
+                    {{tipo.value}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="f.tipo.invalid && submitted">
+                {{f.tipo.hasError('required') ? 'Tipo é obrigatório' : ''}}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Salário" id="salario" required type="number"
+                [(ngModel)]="vaga.salario" name="salario" formControlName="salario" autofocus>
+            <mat-error *ngIf="f.salario.invalid && submitted">
+                {{f.salario.hasError('required') ? 'Salário é obrigatório' : ''}}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <textarea matInput placeholder="Requisitos da vaga" id="descricao" required
+                [(ngModel)]="vaga.descricao" name="descricao" formControlName="descricao" autofocus>
+            </textarea>
+            <mat-error *ngIf="f.descricao.invalid && submitted">
+                {{f.descricao.hasError('required') ? 'Requisitos da vaga é obrigatório' : ''}}
+            </mat-error>
+        </mat-form-field>
+    </div>    
+    <div class="botoes" align="end">
+        <button type="submit" mat-raised-button color="primary">Salvar</button>
+        <button  mat-raised-button routerLink="/Vagas">Cancelar</button>
+    </div>  
+  </form>

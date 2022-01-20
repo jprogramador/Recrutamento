@@ -1,0 +1,47 @@
+<h2>Alterar Candidato</h2>
+  <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+    <div class="mat-elevation-z8 cadastro">
+        <mat-form-field>
+            <input matInput placeholder="Candidato" id="candidato" required 
+                [(ngModel)]="candidato.nome" name="nome" formControlName="nome" autofocus>
+            <mat-error *ngIf="f.nome.invalid && submitted">
+                {{f.nome.hasError('required') ? 'Candidato é obrigatório' : ''}}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Perfil</mat-label>
+            <mat-select [(ngModel)]="candidato.perfil" [compareWith]="compareObjects"
+                id="perfil" name="perfil"
+                formControlName="perfil">
+                <mat-option *ngFor="let perfil of perfis" [value]="perfil">
+                    {{perfil.nome}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="f.perfil.invalid && submitted">
+                {{f.nome.hasError('required') ? 'Perfil é obrigatório' : ''}}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Pretensão" id="pretensao" required type="number"
+                [(ngModel)]="candidato.pretensao" name="pretensao" formControlName="pretensao" autofocus>
+            <mat-error *ngIf="f.pretensao.invalid && submitted">
+                {{f.pretensao.hasError('required') ? 'Pretensão é obrigatório' : ''}}
+            </mat-error>
+        </mat-form-field><mat-form-field>
+            <textarea matInput placeholder="Fale um pouco sobe você" id="descricao" required
+                [(ngModel)]="candidato.descricao" name="descricao" formControlName="descricao" autofocus>
+            </textarea>
+            <mat-error *ngIf="f.descricao.invalid && submitted">
+                {{f.descricao.hasError('required') ? 'Fale um pouco sobre você' : ''}}
+            </mat-error>
+        </mat-form-field>
+        <input class="hide" placeholder="Currículo" id="curriculo" type="file" (change)="curriculoChange($event)"
+            name="curriculo" autofocus>    
+        <label for="curriculo" class="mat-raised-button mat-primary">Enviar currículo</label>
+        <label id="nomeArquivo">{{nomeArquivo}}</label>
+    </div>    
+    <div class="botoes" align="end">
+        <button type="submit" mat-raised-button color="primary">Salvar</button>
+        <button mat-raised-button routerLink="/Candidatos">Cancelar</button>
+    </div>  
+  </form>

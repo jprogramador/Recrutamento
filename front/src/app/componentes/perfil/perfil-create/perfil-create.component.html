@@ -1,0 +1,16 @@
+<h2>Novo Perfil</h2>
+  <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+    <div class="mat-elevation-z8 cadastro">
+        <mat-form-field>
+            <input matInput placeholder="Perfil" id="nome" required 
+                [(ngModel)]="perfil.nome" name="nome" formControlName="nome" autofocus>
+            <mat-error *ngIf="f.nome.invalid && submitted">
+                {{f.nome.hasError('required') ? 'Perfil é obrigatório' : ''}}
+            </mat-error>
+        </mat-form-field>
+    </div>    
+    <div class="botoes" align="end">
+        <button type="submit" mat-raised-button color="primary">Salvar</button>
+        <button  mat-raised-button routerLink="/Perfis">Cancelar</button>
+    </div>  
+  </form>

@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import "~ng-pick-datetime/assets/style/picker.min.css";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.botoes{
+    margin-top: 10px;
+}
+
+.botoes button{
+    margin-left: 8px;
+  }
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+.cadastro{
+    padding: 10px;
+    background-color: #FFF
+}
+
+tr.mat-row:hover {
+    background: #777;
+    cursor: pointer
+}
+
+@media print {
+    @page 
+    {
+        size: auto;   /* auto is the initial value */
+        margin: 0mm;  /* this affects the margin in the printer settings */
+    }
+}
